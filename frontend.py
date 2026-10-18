@@ -13,7 +13,11 @@ import streamlit.components.v1 as components
 # Configuration
 # --------------------------------------------------
 
-API_URL = "http://127.0.0.1:8000/predict"
+import os
+API_URL = os.getenv(
+    "API_URL",
+    "http://127.0.0.1:8000/predict"
+)
 CURRENT_YEAR = 2026
 
 INK = "#12263A"      # deep navy: text, hero
